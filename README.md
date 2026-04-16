@@ -44,7 +44,7 @@ Status page is eventually consistent. Mostly eventually.
 - **Cloud & Infra** — Azure, AWS, GCP, Kubernetes, OpenToFu, Ansible, Docker
 - **Languages** — Python, TypeScript, Go, Rust (occasionally, cautiously)
 - **Data & AI** — Postgres, Azure Storage Account, AWS S3, n8n, oh and a suspicious amount of prompt engineering 🤖
-- **Tools** — VSCode, Cursor, WSL, ZSH, Claude Code, `gh`, `jq`, `uv`, `bun`, `turborepo`
+- **Tools** — VSCode, Cursor, WSL, ZSH, Claude Code, `gh`, `jq`, `uv`, `bun`, `turborepo`, `next.js`, `ReactNative`
 
 Yes, your eyes are correct — there's no 100-logo shield wall of every tool I've ever touched, in hopes each one trips some HR keyword filter. AI keeps shoving new frameworks into our laps faster than we can `git pull`...so please sir, how could you know so little? 😧
 
