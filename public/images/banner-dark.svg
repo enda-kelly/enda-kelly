@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 280" width="1000" height="280" role="img" aria-label="Enda Kelly — still trying to automate myself out of a job. The irony scales linearly.">
+  <defs>
+    <linearGradient id="bgDark" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a0118"/>
+      <stop offset="55%" stop-color="#1a0632"/>
+      <stop offset="100%" stop-color="#2d0a4e"/>
+    </linearGradient>
+    <linearGradient id="sunDark" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ff2e93"/>
+      <stop offset="50%" stop-color="#ff6b35"/>
+      <stop offset="100%" stop-color="#ffcc00"/>
+    </linearGradient>
+    <linearGradient id="gridDark" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ff2e93" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#ff2e93" stop-opacity="0.6"/>
+    </linearGradient>
+    <filter id="glowPink" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glowCyan" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.8" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="scanDark" width="1" height="3" patternUnits="userSpaceOnUse">
+      <rect width="1" height="1" fill="#ffffff" opacity="0.04"/>
+    </pattern>
+  </defs>
+
+  <rect width="1000" height="280" fill="url(#bgDark)"/>
+
+  <!-- Sun disc -->
+  <g transform="translate(780 130)">
+    <circle r="90" fill="url(#sunDark)" opacity="0.95"/>
+    <rect x="-100" y="30" width="200" height="3" fill="#0a0118"/>
+    <rect x="-100" y="42" width="200" height="4" fill="#0a0118"/>
+    <rect x="-100" y="58" width="200" height="5" fill="#0a0118"/>
+    <rect x="-100" y="76" width="200" height="7" fill="#0a0118"/>
+  </g>
+
+  <!-- Horizon grid -->
+  <g stroke="#ff2e93" stroke-width="1.2" opacity="0.85">
+    <line x1="0" y1="200" x2="1000" y2="200"/>
+    <line x1="0" y1="215" x2="1000" y2="215" opacity="0.55"/>
+    <line x1="0" y1="235" x2="1000" y2="235" opacity="0.4"/>
+    <line x1="0" y1="258" x2="1000" y2="258" opacity="0.3"/>
+  </g>
+  <g stroke="#ff2e93" stroke-width="1" opacity="0.5">
+    <line x1="500" y1="200" x2="-200" y2="280"/>
+    <line x1="500" y1="200" x2="-50" y2="280"/>
+    <line x1="500" y1="200" x2="130" y2="280"/>
+    <line x1="500" y1="200" x2="300" y2="280"/>
+    <line x1="500" y1="200" x2="450" y2="280"/>
+    <line x1="500" y1="200" x2="550" y2="280"/>
+    <line x1="500" y1="200" x2="700" y2="280"/>
+    <line x1="500" y1="200" x2="870" y2="280"/>
+    <line x1="500" y1="200" x2="1050" y2="280"/>
+    <line x1="500" y1="200" x2="1200" y2="280"/>
+  </g>
+  <rect x="0" y="200" width="1000" height="80" fill="url(#gridDark)" opacity="0.25"/>
+
+  <!-- Frame corners -->
+  <g stroke="#00f0ff" stroke-width="2" fill="none" opacity="0.9">
+    <polyline points="20,20 20,55 55,20"/>
+    <polyline points="980,20 980,55 945,20"/>
+    <polyline points="20,260 20,225 55,260"/>
+    <polyline points="980,260 980,225 945,260"/>
+  </g>
+
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
+    <text x="50" y="90" font-size="13" fill="#00f0ff" opacity="0.85" letter-spacing="2" filter="url(#glowCyan)">&gt; booting enda.sys ... ok</text>
+    <text x="50" y="152" font-size="60" font-weight="700" fill="#ff2e93" letter-spacing="4" filter="url(#glowPink)">ENDA KELLY</text>
+    <text x="50" y="152" font-size="60" font-weight="700" fill="none" stroke="#00f0ff" stroke-width="0.4" letter-spacing="4" opacity="0.6">ENDA KELLY</text>
+    <text x="52" y="186" font-size="16" fill="#00f0ff" letter-spacing="1.2" filter="url(#glowCyan)">// still trying to automate myself out of a job</text>
+    <text x="52" y="252" font-size="12" fill="#a78bfa" letter-spacing="1.5" opacity="0.9">[ cloud ] · [ ai governance ] · [ finops ] · [ eu / us ]</text>
+  </g>
+
+  <!-- Scanlines overlay -->
+  <rect width="1000" height="280" fill="url(#scanDark)"/>
+</svg>

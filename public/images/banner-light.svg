@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 280" width="1000" height="280" role="img" aria-label="Enda Kelly — still trying to automate myself out of a job. The irony scales linearly.">
+  <defs>
+    <linearGradient id="bgLight" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef2ff"/>
+      <stop offset="60%" stop-color="#ffe4f1"/>
+      <stop offset="100%" stop-color="#ffd1dc"/>
+    </linearGradient>
+    <linearGradient id="sunLight" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ec4899"/>
+      <stop offset="50%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#fbbf24"/>
+    </linearGradient>
+    <linearGradient id="gridLight" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c026d3" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#c026d3" stop-opacity="0.35"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1000" height="280" fill="url(#bgLight)"/>
+
+  <!-- Sun disc -->
+  <g transform="translate(780 130)">
+    <circle r="90" fill="url(#sunLight)" opacity="0.95"/>
+    <rect x="-100" y="30" width="200" height="3" fill="#ffe4f1"/>
+    <rect x="-100" y="42" width="200" height="4" fill="#ffe4f1"/>
+    <rect x="-100" y="58" width="200" height="5" fill="#ffe4f1"/>
+    <rect x="-100" y="76" width="200" height="7" fill="#ffe4f1"/>
+  </g>
+
+  <!-- Horizon grid -->
+  <g stroke="#c026d3" stroke-width="1.2" opacity="0.75">
+    <line x1="0" y1="200" x2="1000" y2="200"/>
+    <line x1="0" y1="215" x2="1000" y2="215" opacity="0.55"/>
+    <line x1="0" y1="235" x2="1000" y2="235" opacity="0.4"/>
+    <line x1="0" y1="258" x2="1000" y2="258" opacity="0.3"/>
+  </g>
+  <g stroke="#c026d3" stroke-width="1" opacity="0.45">
+    <line x1="500" y1="200" x2="-200" y2="280"/>
+    <line x1="500" y1="200" x2="-50" y2="280"/>
+    <line x1="500" y1="200" x2="130" y2="280"/>
+    <line x1="500" y1="200" x2="300" y2="280"/>
+    <line x1="500" y1="200" x2="450" y2="280"/>
+    <line x1="500" y1="200" x2="550" y2="280"/>
+    <line x1="500" y1="200" x2="700" y2="280"/>
+    <line x1="500" y1="200" x2="870" y2="280"/>
+    <line x1="500" y1="200" x2="1050" y2="280"/>
+    <line x1="500" y1="200" x2="1200" y2="280"/>
+  </g>
+  <rect x="0" y="200" width="1000" height="80" fill="url(#gridLight)" opacity="0.3"/>
+
+  <!-- Frame corners -->
+  <g stroke="#0891b2" stroke-width="2" fill="none" opacity="0.8">
+    <polyline points="20,20 20,55 55,20"/>
+    <polyline points="980,20 980,55 945,20"/>
+    <polyline points="20,260 20,225 55,260"/>
+    <polyline points="980,260 980,225 945,260"/>
+  </g>
+
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
+    <text x="50" y="90" font-size="13" fill="#0891b2" opacity="0.9" letter-spacing="2">&gt; booting enda.sys ... ok</text>
+    <text x="50" y="152" font-size="60" font-weight="700" fill="#c026d3" letter-spacing="4">ENDA KELLY</text>
+    <text x="50" y="152" font-size="60" font-weight="700" fill="none" stroke="#0891b2" stroke-width="0.4" letter-spacing="4" opacity="0.7">ENDA KELLY</text>
+    <text x="52" y="186" font-size="16" fill="#0891b2" letter-spacing="1.2">// still trying to automate myself out of a job</text>
+    <text x="52" y="252" font-size="12" fill="#7c3aed" letter-spacing="1.5" opacity="0.9">[ cloud ] · [ ai governance ] · [ finops ] · [ eu / us ]</text>
+  </g>
+</svg>

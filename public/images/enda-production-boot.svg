@@ -1,0 +1,849 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 790" width="900" height="790" role="img" aria-label="enda.kernel boot sequence + systemctl status">
+  <defs>
+    <linearGradient id="termBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a0118"/>
+      <stop offset="100%" stop-color="#1a0632"/>
+    </linearGradient>
+    <filter id="neonPink" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.8" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="neonCyan" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="neonGreen" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="crtGreen" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1.6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="scanlines" width="2" height="3" patternUnits="userSpaceOnUse">
+      <rect width="2" height="1" fill="#000" opacity="0.55"/>
+    </pattern>
+    <clipPath id="logoClip">
+      <rect x="36" y="130" width="300" height="84"/>
+    </clipPath>
+    <style>
+      .mono { font-family: ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas, monospace; }
+      .cmd    { fill: #00f0ff; font-size: 14px; }
+      .lbl    { fill: #f4f4f5; font-size: 13px; }
+      .dim    { fill: #a78bfa; font-size: 13px; }
+      .pink   { fill: #ff2e93; font-size: 13px; }
+      .ok     { fill: #4ade80; font-size: 13px; }
+      .yellow { fill: #fbbf24; font-size: 13px; }
+      .frame  { stroke: #00f0ff; stroke-width: 1.2; fill: none; opacity: 0.75; }
+      .arrow  { stroke: #ff2e93; stroke-width: 1.5; fill: none; opacity: 0.6; }
+      .pulse  { fill: #ff2e93; }
+      .logo   { font-size: 13px; font-family: ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas, monospace; white-space: pre; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="790" fill="url(#termBg)"/>
+
+  <!-- Terminal chrome -->
+  <rect x="10" y="10" width="880" height="770" rx="6" class="frame"/>
+  <circle cx="28" cy="28" r="5" fill="#ff5f57"/>
+  <circle cx="46" cy="28" r="5" fill="#febc2e"/>
+  <circle cx="64" cy="28" r="5" fill="#28c840"/>
+  <text x="450" y="33" text-anchor="middle" class="mono dim" font-size="11">enda@cloudnua: ~ — tty0</text>
+  <line x1="10" y1="48" x2="890" y2="48" class="frame"/>
+
+  <!-- ==================== BOOT SEQUENCE ==================== -->
+
+  <!-- [BIOS] line with POST dots -->
+  <g class="mono" opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="0.2s" begin="0.05s" fill="freeze"/>
+    <text x="28" y="72"><tspan class="yellow">[BIOS]</tspan><tspan class="lbl" dx="6">enda.bios v2.26.0  //  POST</tspan><tspan class="dim" dx="4">....................</tspan><tspan class="ok" dx="6">OK</tspan></text>
+  </g>
+
+  <!-- [MEM] line -->
+  <g class="mono" opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="0.2s" begin="0.25s" fill="freeze"/>
+    <text x="28" y="92"><tspan class="cyan" fill="#00f0ff">[MEM] </tspan><tspan class="lbl" dx="6">memory check  //</tspan><tspan class="dim" dx="6">∞ KB available</tspan><tspan class="dim" dx="10">...........</tspan><tspan class="ok" dx="6">OK</tspan></text>
+  </g>
+
+  <!-- [KERN] init -->
+  <g class="mono" opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="0.2s" begin="0.45s" fill="freeze"/>
+    <text x="28" y="112"><tspan class="pink">[KERN]</tspan><tspan class="lbl" dx="6">initializing enda.kernel v1.x</tspan></text>
+  </g>
+
+  <!-- ASCII ENDA logo — inlined from ascii-art-ENDA.svg, row-by-row reveal -->
+  <g filter="url(#crtGreen)">
+    <animate attributeName="opacity" values="1;0.88;1;0.93;1" dur="5.5s" repeatCount="indefinite" begin="1.45s"/>
+    <svg x="40" y="126" width="320" height="133" viewBox="0 22 538.56 224.4" preserveAspectRatio="xMinYMin meet" font-family="ui-monospace, Menlo, monospace" font-size="16" style="dominant-baseline: hanging">
+      <g opacity="0"><animate attributeName="opacity" values="0;1" dur="2.5s" begin="0.70s" fill="freeze"/>
+        <text x="0" y="0" fill="#4ade80">3</text>
+        <text x="10.56" y="0" fill="#4ade80">3</text>
+        <text x="21.12" y="0" fill="#4ade80">3</text>
+        <text x="31.68" y="0" fill="#4ade80">3</text>
+        <text x="42.24" y="0" fill="#4ade80">3</text>
+        <text x="52.8" y="0" fill="#4ade80">3</text>
+        <text x="63.36" y="0" fill="#4ade80">3</text>
+        <text x="73.92" y="0" fill="#4ade80">3</text>
+        <text x="84.48" y="0" fill="#4ade80">3</text>
+        <text x="95.04" y="0" fill="#4ade80">3</text>
+        <text x="105.6" y="0" fill="#4ade80">3</text>
+        <text x="116.16" y="0" fill="#4ade80">3</text>
+        <text x="126.72" y="0" fill="#4ade80">3</text>
+        <text x="137.28" y="0" fill="#4ade80">3</text>
+        <text x="147.84" y="0" fill="#4ade80">3</text>
+        <text x="158.4" y="0" fill="#4ade80">3</text>
+        <text x="168.96" y="0" fill="#4ade80">3</text>
+        <text x="179.52" y="0" fill="#4ade80">3</text>
+        <text x="190.08" y="0" fill="#4ade80">3</text>
+        <text x="200.64" y="0" fill="#4ade80">3</text>
+        <text x="211.2" y="0" fill="#4ade80">3</text>
+        <text x="221.76" y="0" fill="#4ade80">3</text>
+        <text x="232.32" y="0" fill="#4ade80">3</text>
+        <text x="242.88" y="0" fill="#4ade80">3</text>
+        <text x="253.44" y="0" fill="#4ade80">3</text>
+        <text x="264" y="0" fill="#4ade80">3</text>
+        <text x="274.56" y="0" fill="#4ade80">3</text>
+        <text x="285.12" y="0" fill="#4ade80">3</text>
+        <text x="295.68" y="0" fill="#4ade80">3</text>
+        <text x="306.24" y="0" fill="#4ade80">3</text>
+        <text x="316.8" y="0" fill="#4ade80">3</text>
+        <text x="327.36" y="0" fill="#4ade80">3</text>
+        <text x="337.92" y="0" fill="#4ade80">3</text>
+        <text x="348.48" y="0" fill="#4ade80">3</text>
+        <text x="359.04" y="0" fill="#4ade80">3</text>
+        <text x="369.6" y="0" fill="#4ade80">3</text>
+        <text x="380.16" y="0" fill="#4ade80">3</text>
+        <text x="390.72" y="0" fill="#4ade80">3</text>
+        <text x="401.28" y="0" fill="#4ade80">3</text>
+        <text x="411.84" y="0" fill="#4ade80">3</text>
+        <text x="422.4" y="0" fill="#4ade80">3</text>
+        <text x="432.96" y="0" fill="#4ade80">3</text>
+        <text x="443.52" y="0" fill="#4ade80">3</text>
+        <text x="454.08" y="0" fill="#4ade80">3</text>
+        <text x="464.64" y="0" fill="#4ade80">3</text>
+        <text x="475.2" y="0" fill="#4ade80">3</text>
+        <text x="485.76" y="0" fill="#4ade80">3</text>
+        <text x="496.32" y="0" fill="#4ade80">3</text>
+        <text x="506.88" y="0" fill="#4ade80">3</text>
+        <text x="517.44" y="0" fill="#4ade80">3</text>
+        <text x="528" y="0" fill="#4ade80">3</text>
+      </g>
+      <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.18s" begin="0.75s" fill="freeze"/>
+        <text x="0" y="22.4" fill="#4ade80">3</text>
+        <text x="10.56" y="22.4" fill="#4ade80">3</text>
+        <text x="21.12" y="22.4" fill="#4ade80">3</text>
+        <text x="31.68" y="22.4" fill="#4ade80">3</text>
+        <text x="42.24" y="22.4" fill="#4ade80">3</text>
+        <text x="52.8" y="22.4" fill="#4ade80">3</text>
+        <text x="63.36" y="22.4" fill="#4ade80">3</text>
+        <text x="73.92" y="22.4" fill="#4ade80">3</text>
+        <text x="84.48" y="22.4" fill="#4ade80">3</text>
+        <text x="95.04" y="22.4" fill="#4ade80">3</text>
+        <text x="105.6" y="22.4" fill="#4ade80">3</text>
+        <text x="116.16" y="22.4" fill="#4ade80">3</text>
+        <text x="126.72" y="22.4" fill="#4ade80">3</text>
+        <text x="137.28" y="22.4" fill="#4ade80">3</text>
+        <text x="147.84" y="22.4" fill="#4ade80">3</text>
+        <text x="158.4" y="22.4" fill="#4ade80">3</text>
+        <text x="168.96" y="22.4" fill="#4ade80">3</text>
+        <text x="179.52" y="22.4" fill="#4ade80">3</text>
+        <text x="190.08" y="22.4" fill="#4ade80">3</text>
+        <text x="200.64" y="22.4" fill="#4ade80">3</text>
+        <text x="211.2" y="22.4" fill="#4ade80">3</text>
+        <text x="221.76" y="22.4" fill="#4ade80">3</text>
+        <text x="232.32" y="22.4" fill="#4ade80">3</text>
+        <text x="242.88" y="22.4" fill="#4ade80">3</text>
+        <text x="253.44" y="22.4" fill="#4ade80">3</text>
+        <text x="264" y="22.4" fill="#4ade80">3</text>
+        <text x="274.56" y="22.4" fill="#4ade80">3</text>
+        <text x="285.12" y="22.4" fill="#4ade80">3</text>
+        <text x="295.68" y="22.4" fill="#4ade80">3</text>
+        <text x="306.24" y="22.4" fill="#4ade80">3</text>
+        <text x="316.8" y="22.4" fill="#4ade80">3</text>
+        <text x="327.36" y="22.4" fill="#4ade80">3</text>
+        <text x="337.92" y="22.4" fill="#4ade80">3</text>
+        <text x="348.48" y="22.4" fill="#4ade80">3</text>
+        <text x="359.04" y="22.4" fill="#4ade80">3</text>
+        <text x="369.6" y="22.4" fill="#4ade80">3</text>
+        <text x="380.16" y="22.4" fill="#4ade80">3</text>
+        <text x="390.72" y="22.4" fill="#4ade80">3</text>
+        <text x="401.28" y="22.4" fill="#4ade80">3</text>
+        <text x="411.84" y="22.4" fill="#4ade80">3</text>
+        <text x="422.4" y="22.4" fill="#4ade80">3</text>
+        <text x="432.96" y="22.4" fill="#4ade80">3</text>
+        <text x="443.52" y="22.4" fill="#4ade80">3</text>
+        <text x="454.08" y="22.4" fill="#4ade80">3</text>
+        <text x="464.64" y="22.4" fill="#4ade80">3</text>
+        <text x="475.2" y="22.4" fill="#4ade80">3</text>
+        <text x="485.76" y="22.4" fill="#4ade80">3</text>
+        <text x="496.32" y="22.4" fill="#4ade80">3</text>
+        <text x="506.88" y="22.4" fill="#4ade80">3</text>
+        <text x="517.44" y="22.4" fill="#4ade80">3</text>
+        <text x="528" y="22.4" fill="#4ade80">3</text>
+      </g>
+      <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.18s" begin="0.80s" fill="freeze"/>
+        <text x="0" y="44.8" fill="#4ade80">3</text>
+        <text x="10.56" y="44.8" fill="#4ade80">3</text>
+        <text x="21.12" y="44.8" fill="#4ade80">3</text>
+        <text x="31.68" y="44.8" fill="#4ade80">6</text>
+        <text x="42.24" y="44.8" fill="#4ade80">_</text>
+        <text x="116.16" y="44.8" fill="#4ade80">1</text>
+        <text x="126.72" y="44.8" fill="#4ade80">3</text>
+        <text x="137.28" y="44.8" fill="#4ade80">3</text>
+        <text x="147.84" y="44.8" fill="#4ade80">2</text>
+        <text x="168.96" y="44.8" fill="#4ade80">2</text>
+        <text x="179.52" y="44.8" fill="#4ade80">3</text>
+        <text x="190.08" y="44.8" fill="#4ade80">3</text>
+        <text x="200.64" y="44.8" fill="#4ade80">3</text>
+        <text x="211.2" y="44.8" fill="#4ade80">3</text>
+        <text x="221.76" y="44.8" fill="#4ade80">6</text>
+        <text x="232.32" y="44.8" fill="#4ade80">.</text>
+        <text x="242.88" y="44.8" fill="#4ade80">8</text>
+        <text x="253.44" y="44.8" fill="#4ade80">3</text>
+        <text x="264" y="44.8" fill="#4ade80">6</text>
+        <text x="316.8" y="44.8" fill="#4ade80">.</text>
+        <text x="327.36" y="44.8" fill="#4ade80">2</text>
+        <text x="337.92" y="44.8" fill="#4ade80">6</text>
+        <text x="348.48" y="44.8" fill="#4ade80">3</text>
+        <text x="359.04" y="44.8" fill="#4ade80">3</text>
+        <text x="369.6" y="44.8" fill="#4ade80">3</text>
+        <text x="380.16" y="44.8" fill="#4ade80">3</text>
+        <text x="390.72" y="44.8" fill="#4ade80">3</text>
+        <text x="401.28" y="44.8" fill="#4ade80">3</text>
+        <text x="411.84" y="44.8" fill="#4ade80">4</text>
+        <text x="422.4" y="44.8" fill="#4ade80">=</text>
+        <text x="443.52" y="44.8" fill="#4ade80">0</text>
+        <text x="454.08" y="44.8" fill="#4ade80">3</text>
+        <text x="464.64" y="44.8" fill="#4ade80">3</text>
+        <text x="475.2" y="44.8" fill="#4ade80">3</text>
+        <text x="485.76" y="44.8" fill="#4ade80">3</text>
+        <text x="496.32" y="44.8" fill="#4ade80">3</text>
+        <text x="506.88" y="44.8" fill="#4ade80">3</text>
+        <text x="517.44" y="44.8" fill="#4ade80">3</text>
+        <text x="528" y="44.8" fill="#4ade80">3</text>
+      </g>
+      <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.18s" begin="0.85s" fill="freeze"/>
+        <text x="0" y="67.19999999999999" fill="#4ade80">3</text>
+        <text x="10.56" y="67.19999999999999" fill="#4ade80">3</text>
+        <text x="21.12" y="67.19999999999999" fill="#4ade80">3</text>
+        <text x="31.68" y="67.19999999999999" fill="#4ade80">9</text>
+        <text x="63.36" y="67.19999999999999" fill="#4ade80">4</text>
+        <text x="73.92" y="67.19999999999999" fill="#4ade80">4</text>
+        <text x="84.48" y="67.19999999999999" fill="#4ade80">4</text>
+        <text x="95.04" y="67.19999999999999" fill="#4ade80">4</text>
+        <text x="105.6" y="67.19999999999999" fill="#4ade80">4</text>
+        <text x="116.16" y="67.19999999999999" fill="#4ade80">8</text>
+        <text x="126.72" y="67.19999999999999" fill="#4ade80">3</text>
+        <text x="137.28" y="67.19999999999999" fill="#4ade80">3</text>
+        <text x="179.52" y="67.19999999999999" fill="#4ade80">8</text>
+        <text x="190.08" y="67.19999999999999" fill="#4ade80">3</text>
+        <text x="200.64" y="67.19999999999999" fill="#4ade80">3</text>
+        <text x="211.2" y="67.19999999999999" fill="#4ade80">3</text>
+        <text x="221.76" y="67.19999999999999" fill="#4ade80">0</text>
+        <text x="242.88" y="67.19999999999999" fill="#4ade80">7</text>
+        <text x="253.44" y="67.19999999999999" fill="#4ade80">3</text>
+        <text x="264" y="67.19999999999999" fill="#4ade80">=</text>
+        <text x="285.12" y="67.19999999999999" fill="#4ade80">=</text>
+        <text x="295.68" y="67.19999999999999" fill="#4ade80">7</text>
+        <text x="306.24" y="67.19999999999999" fill="#4ade80">5</text>
+        <text x="316.8" y="67.19999999999999" fill="#4ade80">0</text>
+        <text x="348.48" y="67.19999999999999" fill="#4ade80">2</text>
+        <text x="359.04" y="67.19999999999999" fill="#4ade80">3</text>
+        <text x="369.6" y="67.19999999999999" fill="#4ade80">3</text>
+        <text x="380.16" y="67.19999999999999" fill="#4ade80">3</text>
+        <text x="390.72" y="67.19999999999999" fill="#4ade80">3</text>
+        <text x="401.28" y="67.19999999999999" fill="#4ade80">3</text>
+        <text x="411.84" y="67.19999999999999" fill="#4ade80">2</text>
+        <text x="454.08" y="67.19999999999999" fill="#4ade80">6</text>
+        <text x="464.64" y="67.19999999999999" fill="#4ade80">3</text>
+        <text x="475.2" y="67.19999999999999" fill="#4ade80">3</text>
+        <text x="485.76" y="67.19999999999999" fill="#4ade80">3</text>
+        <text x="496.32" y="67.19999999999999" fill="#4ade80">3</text>
+        <text x="506.88" y="67.19999999999999" fill="#4ade80">3</text>
+        <text x="517.44" y="67.19999999999999" fill="#4ade80">3</text>
+        <text x="528" y="67.19999999999999" fill="#4ade80">3</text>
+      </g>
+      <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.18s" begin="0.90s" fill="freeze"/>
+        <text x="0" y="89.6" fill="#4ade80">3</text>
+        <text x="10.56" y="89.6" fill="#4ade80">3</text>
+        <text x="21.12" y="89.6" fill="#4ade80">3</text>
+        <text x="31.68" y="89.6" fill="#4ade80">9</text>
+        <text x="52.8" y="89.6" fill="#4ade80">+</text>
+        <text x="63.36" y="89.6" fill="#4ade80">3</text>
+        <text x="73.92" y="89.6" fill="#4ade80">3</text>
+        <text x="84.48" y="89.6" fill="#4ade80">3</text>
+        <text x="95.04" y="89.6" fill="#4ade80">3</text>
+        <text x="105.6" y="89.6" fill="#4ade80">3</text>
+        <text x="116.16" y="89.6" fill="#4ade80">3</text>
+        <text x="126.72" y="89.6" fill="#4ade80">3</text>
+        <text x="137.28" y="89.6" fill="#4ade80">3</text>
+        <text x="190.08" y="89.6" fill="#4ade80">7</text>
+        <text x="200.64" y="89.6" fill="#4ade80">3</text>
+        <text x="211.2" y="89.6" fill="#4ade80">3</text>
+        <text x="221.76" y="89.6" fill="#4ade80">0</text>
+        <text x="242.88" y="89.6" fill="#4ade80">7</text>
+        <text x="253.44" y="89.6" fill="#4ade80">3</text>
+        <text x="264" y="89.6" fill="#4ade80">=</text>
+        <text x="285.12" y="89.6" fill="#4ade80">5</text>
+        <text x="295.68" y="89.6" fill="#4ade80">3</text>
+        <text x="306.24" y="89.6" fill="#4ade80">3</text>
+        <text x="316.8" y="89.6" fill="#4ade80">3</text>
+        <text x="327.36" y="89.6" fill="#4ade80">5</text>
+        <text x="359.04" y="89.6" fill="#4ade80">9</text>
+        <text x="369.6" y="89.6" fill="#4ade80">3</text>
+        <text x="380.16" y="89.6" fill="#4ade80">3</text>
+        <text x="390.72" y="89.6" fill="#4ade80">3</text>
+        <text x="401.28" y="89.6" fill="#4ade80">6</text>
+        <text x="432.96" y="89.6" fill="#4ade80">6</text>
+        <text x="464.64" y="89.6" fill="#4ade80">4</text>
+        <text x="475.2" y="89.6" fill="#4ade80">3</text>
+        <text x="485.76" y="89.6" fill="#4ade80">3</text>
+        <text x="496.32" y="89.6" fill="#4ade80">3</text>
+        <text x="506.88" y="89.6" fill="#4ade80">3</text>
+        <text x="517.44" y="89.6" fill="#4ade80">3</text>
+        <text x="528" y="89.6" fill="#4ade80">3</text>
+      </g>
+      <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.18s" begin="0.95s" fill="freeze"/>
+        <text x="0" y="112" fill="#4ade80">3</text>
+        <text x="10.56" y="112" fill="#4ade80">3</text>
+        <text x="21.12" y="112" fill="#4ade80">3</text>
+        <text x="31.68" y="112" fill="#4ade80">9</text>
+        <text x="52.8" y="112" fill="#4ade80">+</text>
+        <text x="63.36" y="112" fill="#4ade80">3</text>
+        <text x="73.92" y="112" fill="#4ade80">3</text>
+        <text x="84.48" y="112" fill="#4ade80">3</text>
+        <text x="95.04" y="112" fill="#4ade80">3</text>
+        <text x="105.6" y="112" fill="#4ade80">3</text>
+        <text x="116.16" y="112" fill="#4ade80">3</text>
+        <text x="126.72" y="112" fill="#4ade80">3</text>
+        <text x="137.28" y="112" fill="#4ade80">3</text>
+        <text x="168.96" y="112" fill="#4ade80">9</text>
+        <text x="200.64" y="112" fill="#4ade80">5</text>
+        <text x="211.2" y="112" fill="#4ade80">3</text>
+        <text x="221.76" y="112" fill="#4ade80">0</text>
+        <text x="242.88" y="112" fill="#4ade80">7</text>
+        <text x="253.44" y="112" fill="#4ade80">3</text>
+        <text x="264" y="112" fill="#4ade80">=</text>
+        <text x="285.12" y="112" fill="#4ade80">5</text>
+        <text x="295.68" y="112" fill="#4ade80">3</text>
+        <text x="306.24" y="112" fill="#4ade80">3</text>
+        <text x="316.8" y="112" fill="#4ade80">3</text>
+        <text x="327.36" y="112" fill="#4ade80">3</text>
+        <text x="337.92" y="112" fill="#4ade80">8</text>
+        <text x="359.04" y="112" fill="#4ade80">+</text>
+        <text x="369.6" y="112" fill="#4ade80">3</text>
+        <text x="380.16" y="112" fill="#4ade80">3</text>
+        <text x="390.72" y="112" fill="#4ade80">3</text>
+        <text x="401.28" y="112" fill="#4ade80">1</text>
+        <text x="422.4" y="112" fill="#4ade80">5</text>
+        <text x="432.96" y="112" fill="#4ade80">3</text>
+        <text x="443.52" y="112" fill="#4ade80">1</text>
+        <text x="464.64" y="112" fill="#4ade80">3</text>
+        <text x="475.2" y="112" fill="#4ade80">3</text>
+        <text x="485.76" y="112" fill="#4ade80">3</text>
+        <text x="496.32" y="112" fill="#4ade80">3</text>
+        <text x="506.88" y="112" fill="#4ade80">3</text>
+        <text x="517.44" y="112" fill="#4ade80">3</text>
+        <text x="528" y="112" fill="#4ade80">3</text>
+      </g>
+      <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.18s" begin="1.00s" fill="freeze"/>
+        <text x="0" y="134.39999999999998" fill="#4ade80">3</text>
+        <text x="10.56" y="134.39999999999998" fill="#4ade80">3</text>
+        <text x="21.12" y="134.39999999999998" fill="#4ade80">3</text>
+        <text x="31.68" y="134.39999999999998" fill="#4ade80">9</text>
+        <text x="105.6" y="134.39999999999998" fill="#4ade80">+</text>
+        <text x="116.16" y="134.39999999999998" fill="#4ade80">5</text>
+        <text x="126.72" y="134.39999999999998" fill="#4ade80">3</text>
+        <text x="137.28" y="134.39999999999998" fill="#4ade80">3</text>
+        <text x="168.96" y="134.39999999999998" fill="#4ade80">6</text>
+        <text x="179.52" y="134.39999999999998" fill="#4ade80">4</text>
+        <text x="200.64" y="134.39999999999998" fill="#4ade80">+</text>
+        <text x="211.2" y="134.39999999999998" fill="#4ade80">3</text>
+        <text x="221.76" y="134.39999999999998" fill="#4ade80">0</text>
+        <text x="242.88" y="134.39999999999998" fill="#4ade80">7</text>
+        <text x="253.44" y="134.39999999999998" fill="#4ade80">3</text>
+        <text x="264" y="134.39999999999998" fill="#4ade80">=</text>
+        <text x="285.12" y="134.39999999999998" fill="#4ade80">5</text>
+        <text x="295.68" y="134.39999999999998" fill="#4ade80">3</text>
+        <text x="306.24" y="134.39999999999998" fill="#4ade80">3</text>
+        <text x="316.8" y="134.39999999999998" fill="#4ade80">3</text>
+        <text x="327.36" y="134.39999999999998" fill="#4ade80">3</text>
+        <text x="337.92" y="134.39999999999998" fill="#4ade80">5</text>
+        <text x="369.6" y="134.39999999999998" fill="#4ade80">3</text>
+        <text x="380.16" y="134.39999999999998" fill="#4ade80">3</text>
+        <text x="390.72" y="134.39999999999998" fill="#4ade80">4</text>
+        <text x="422.4" y="134.39999999999998" fill="#4ade80">4</text>
+        <text x="432.96" y="134.39999999999998" fill="#4ade80">3</text>
+        <text x="443.52" y="134.39999999999998" fill="#4ade80">6</text>
+        <text x="475.2" y="134.39999999999998" fill="#4ade80">5</text>
+        <text x="485.76" y="134.39999999999998" fill="#4ade80">3</text>
+        <text x="496.32" y="134.39999999999998" fill="#4ade80">3</text>
+        <text x="506.88" y="134.39999999999998" fill="#4ade80">3</text>
+        <text x="517.44" y="134.39999999999998" fill="#4ade80">3</text>
+        <text x="528" y="134.39999999999998" fill="#4ade80">3</text>
+      </g>
+      <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.18s" begin="1.05s" fill="freeze"/>
+        <text x="0" y="156.79999999999998" fill="#4ade80">3</text>
+        <text x="10.56" y="156.79999999999998" fill="#4ade80">3</text>
+        <text x="21.12" y="156.79999999999998" fill="#4ade80">3</text>
+        <text x="31.68" y="156.79999999999998" fill="#4ade80">9</text>
+        <text x="63.36" y="156.79999999999998" fill="#4ade80">7</text>
+        <text x="73.92" y="156.79999999999998" fill="#4ade80">7</text>
+        <text x="84.48" y="156.79999999999998" fill="#4ade80">7</text>
+        <text x="95.04" y="156.79999999999998" fill="#4ade80">7</text>
+        <text x="105.6" y="156.79999999999998" fill="#4ade80">9</text>
+        <text x="116.16" y="156.79999999999998" fill="#4ade80">3</text>
+        <text x="126.72" y="156.79999999999998" fill="#4ade80">3</text>
+        <text x="137.28" y="156.79999999999998" fill="#4ade80">3</text>
+        <text x="168.96" y="156.79999999999998" fill="#4ade80">6</text>
+        <text x="179.52" y="156.79999999999998" fill="#4ade80">3</text>
+        <text x="190.08" y="156.79999999999998" fill="#4ade80">0</text>
+        <text x="211.2" y="156.79999999999998" fill="#4ade80">3</text>
+        <text x="221.76" y="156.79999999999998" fill="#4ade80">0</text>
+        <text x="242.88" y="156.79999999999998" fill="#4ade80">7</text>
+        <text x="253.44" y="156.79999999999998" fill="#4ade80">3</text>
+        <text x="264" y="156.79999999999998" fill="#4ade80">=</text>
+        <text x="285.12" y="156.79999999999998" fill="#4ade80">5</text>
+        <text x="295.68" y="156.79999999999998" fill="#4ade80">3</text>
+        <text x="306.24" y="156.79999999999998" fill="#4ade80">3</text>
+        <text x="316.8" y="156.79999999999998" fill="#4ade80">3</text>
+        <text x="327.36" y="156.79999999999998" fill="#4ade80">3</text>
+        <text x="337.92" y="156.79999999999998" fill="#4ade80">6</text>
+        <text x="369.6" y="156.79999999999998" fill="#4ade80">3</text>
+        <text x="380.16" y="156.79999999999998" fill="#4ade80">3</text>
+        <text x="390.72" y="156.79999999999998" fill="#4ade80">4</text>
+        <text x="411.84" y="156.79999999999998" fill="#4ade80">7</text>
+        <text x="422.4" y="156.79999999999998" fill="#4ade80">3</text>
+        <text x="432.96" y="156.79999999999998" fill="#4ade80">3</text>
+        <text x="443.52" y="156.79999999999998" fill="#4ade80">3</text>
+        <text x="454.08" y="156.79999999999998" fill="#4ade80">0</text>
+        <text x="475.2" y="156.79999999999998" fill="#4ade80">3</text>
+        <text x="485.76" y="156.79999999999998" fill="#4ade80">3</text>
+        <text x="496.32" y="156.79999999999998" fill="#4ade80">3</text>
+        <text x="506.88" y="156.79999999999998" fill="#4ade80">3</text>
+        <text x="517.44" y="156.79999999999998" fill="#4ade80">3</text>
+        <text x="528" y="156.79999999999998" fill="#4ade80">3</text>
+      </g>
+      <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.18s" begin="1.10s" fill="freeze"/>
+        <text x="0" y="179.2" fill="#4ade80">3</text>
+        <text x="10.56" y="179.2" fill="#4ade80">3</text>
+        <text x="21.12" y="179.2" fill="#4ade80">3</text>
+        <text x="31.68" y="179.2" fill="#4ade80">9</text>
+        <text x="52.8" y="179.2" fill="#4ade80">+</text>
+        <text x="63.36" y="179.2" fill="#4ade80">3</text>
+        <text x="73.92" y="179.2" fill="#4ade80">3</text>
+        <text x="84.48" y="179.2" fill="#4ade80">3</text>
+        <text x="95.04" y="179.2" fill="#4ade80">3</text>
+        <text x="105.6" y="179.2" fill="#4ade80">3</text>
+        <text x="116.16" y="179.2" fill="#4ade80">3</text>
+        <text x="126.72" y="179.2" fill="#4ade80">3</text>
+        <text x="137.28" y="179.2" fill="#4ade80">3</text>
+        <text x="168.96" y="179.2" fill="#4ade80">6</text>
+        <text x="179.52" y="179.2" fill="#4ade80">3</text>
+        <text x="190.08" y="179.2" fill="#4ade80">5</text>
+        <text x="221.76" y="179.2" fill="#4ade80">_</text>
+        <text x="242.88" y="179.2" fill="#4ade80">7</text>
+        <text x="253.44" y="179.2" fill="#4ade80">3</text>
+        <text x="264" y="179.2" fill="#4ade80">=</text>
+        <text x="285.12" y="179.2" fill="#4ade80">5</text>
+        <text x="295.68" y="179.2" fill="#4ade80">3</text>
+        <text x="306.24" y="179.2" fill="#4ade80">3</text>
+        <text x="316.8" y="179.2" fill="#4ade80">3</text>
+        <text x="327.36" y="179.2" fill="#4ade80">3</text>
+        <text x="337.92" y="179.2" fill="#4ade80">6</text>
+        <text x="359.04" y="179.2" fill="#4ade80">0</text>
+        <text x="369.6" y="179.2" fill="#4ade80">3</text>
+        <text x="380.16" y="179.2" fill="#4ade80">4</text>
+        <text x="485.76" y="179.2" fill="#4ade80">4</text>
+        <text x="496.32" y="179.2" fill="#4ade80">3</text>
+        <text x="506.88" y="179.2" fill="#4ade80">3</text>
+        <text x="517.44" y="179.2" fill="#4ade80">3</text>
+        <text x="528" y="179.2" fill="#4ade80">3</text>
+      </g>
+      <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.18s" begin="1.15s" fill="freeze"/>
+        <text x="0" y="201.6" fill="#4ade80">3</text>
+        <text x="10.56" y="201.6" fill="#4ade80">3</text>
+        <text x="21.12" y="201.6" fill="#4ade80">3</text>
+        <text x="31.68" y="201.6" fill="#4ade80">9</text>
+        <text x="52.8" y="201.6" fill="#4ade80">+</text>
+        <text x="63.36" y="201.6" fill="#4ade80">3</text>
+        <text x="73.92" y="201.6" fill="#4ade80">3</text>
+        <text x="84.48" y="201.6" fill="#4ade80">3</text>
+        <text x="95.04" y="201.6" fill="#4ade80">3</text>
+        <text x="105.6" y="201.6" fill="#4ade80">3</text>
+        <text x="116.16" y="201.6" fill="#4ade80">3</text>
+        <text x="126.72" y="201.6" fill="#4ade80">3</text>
+        <text x="137.28" y="201.6" fill="#4ade80">3</text>
+        <text x="168.96" y="201.6" fill="#4ade80">6</text>
+        <text x="179.52" y="201.6" fill="#4ade80">3</text>
+        <text x="190.08" y="201.6" fill="#4ade80">3</text>
+        <text x="200.64" y="201.6" fill="#4ade80">8</text>
+        <text x="242.88" y="201.6" fill="#4ade80">7</text>
+        <text x="253.44" y="201.6" fill="#4ade80">3</text>
+        <text x="264" y="201.6" fill="#4ade80">=</text>
+        <text x="285.12" y="201.6" fill="#4ade80">5</text>
+        <text x="295.68" y="201.6" fill="#4ade80">3</text>
+        <text x="306.24" y="201.6" fill="#4ade80">3</text>
+        <text x="316.8" y="201.6" fill="#4ade80">3</text>
+        <text x="327.36" y="201.6" fill="#4ade80">9</text>
+        <text x="359.04" y="201.6" fill="#4ade80">6</text>
+        <text x="369.6" y="201.6" fill="#4ade80">3</text>
+        <text x="380.16" y="201.6" fill="#4ade80">6</text>
+        <text x="401.28" y="201.6" fill="#4ade80">=</text>
+        <text x="411.84" y="201.6" fill="#4ade80">7</text>
+        <text x="422.4" y="201.6" fill="#4ade80">7</text>
+        <text x="432.96" y="201.6" fill="#4ade80">7</text>
+        <text x="443.52" y="201.6" fill="#4ade80">7</text>
+        <text x="454.08" y="201.6" fill="#4ade80">7</text>
+        <text x="464.64" y="201.6" fill="#4ade80">_</text>
+        <text x="485.76" y="201.6" fill="#4ade80">6</text>
+        <text x="496.32" y="201.6" fill="#4ade80">3</text>
+        <text x="506.88" y="201.6" fill="#4ade80">3</text>
+        <text x="517.44" y="201.6" fill="#4ade80">3</text>
+        <text x="528" y="201.6" fill="#4ade80">3</text>
+      </g>
+      <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.18s" begin="1.20s" fill="freeze"/>
+        <text x="0" y="224" fill="#4ade80">3</text>
+        <text x="10.56" y="224" fill="#4ade80">3</text>
+        <text x="21.12" y="224" fill="#4ade80">3</text>
+        <text x="31.68" y="224" fill="#4ade80">9</text>
+        <text x="116.16" y="224" fill="#4ade80">0</text>
+        <text x="126.72" y="224" fill="#4ade80">7</text>
+        <text x="137.28" y="224" fill="#4ade80">3</text>
+        <text x="168.96" y="224" fill="#4ade80">6</text>
+        <text x="179.52" y="224" fill="#4ade80">3</text>
+        <text x="190.08" y="224" fill="#4ade80">3</text>
+        <text x="200.64" y="224" fill="#4ade80">3</text>
+        <text x="211.2" y="224" fill="#4ade80">3</text>
+        <text x="242.88" y="224" fill="#4ade80">7</text>
+        <text x="253.44" y="224" fill="#4ade80">3</text>
+        <text x="264" y="224" fill="#4ade80">=</text>
+        <text x="295.68" y="224" fill="#4ade80">=</text>
+        <text x="306.24" y="224" fill="#4ade80">_</text>
+        <text x="348.48" y="224" fill="#4ade80">8</text>
+        <text x="359.04" y="224" fill="#4ade80">3</text>
+        <text x="369.6" y="224" fill="#4ade80">3</text>
+        <text x="380.16" y="224" fill="#4ade80">.</text>
+        <text x="401.28" y="224" fill="#4ade80">9</text>
+        <text x="411.84" y="224" fill="#4ade80">3</text>
+        <text x="422.4" y="224" fill="#4ade80">3</text>
+        <text x="432.96" y="224" fill="#4ade80">3</text>
+        <text x="443.52" y="224" fill="#4ade80">3</text>
+        <text x="454.08" y="224" fill="#4ade80">3</text>
+        <text x="464.64" y="224" fill="#4ade80">7</text>
+        <text x="485.76" y="224" fill="#4ade80">_</text>
+        <text x="496.32" y="224" fill="#4ade80">3</text>
+        <text x="506.88" y="224" fill="#4ade80">3</text>
+        <text x="517.44" y="224" fill="#4ade80">3</text>
+        <text x="528" y="224" fill="#4ade80">3</text>
+      </g>
+      <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.18s" begin="1.25s" fill="freeze"/>
+        <text x="0" y="296.4" fill="#4ade80">3</text>
+        <text x="10.56" y="296.4" fill="#4ade80">3</text>
+        <text x="21.12" y="296.4" fill="#4ade80">3</text>
+        <text x="31.68" y="296.4" fill="#4ade80">5</text>
+        <text x="42.24" y="296.4" fill="#4ade80">0</text>
+        <text x="52.8" y="296.4" fill="#4ade80">_</text>
+        <text x="63.36" y="296.4" fill="#4ade80">_</text>
+        <text x="73.92" y="296.4" fill="#4ade80">_</text>
+        <text x="84.48" y="296.4" fill="#4ade80">_</text>
+        <text x="95.04" y="296.4" fill="#4ade80">_</text>
+        <text x="105.6" y="296.4" fill="#4ade80">_</text>
+        <text x="116.16" y="296.4" fill="#4ade80">+</text>
+        <text x="126.72" y="296.4" fill="#4ade80">7</text>
+        <text x="137.28" y="296.4" fill="#4ade80">3</text>
+        <text x="147.84" y="296.4" fill="#4ade80">4</text>
+        <text x="158.4" y="296.4" fill="#4ade80">2</text>
+        <text x="168.96" y="296.4" fill="#4ade80">4</text>
+        <text x="179.52" y="296.4" fill="#4ade80">3</text>
+        <text x="190.08" y="296.4" fill="#4ade80">3</text>
+        <text x="200.64" y="296.4" fill="#4ade80">3</text>
+        <text x="211.2" y="296.4" fill="#4ade80">4</text>
+        <text x="221.76" y="296.4" fill="#4ade80">2</text>
+        <text x="232.32" y="296.4" fill="#4ade80">=</text>
+        <text x="242.88" y="296.4" fill="#4ade80">7</text>
+        <text x="253.44" y="296.4" fill="#4ade80">3</text>
+        <text x="264" y="296.4" fill="#4ade80">8</text>
+        <text x="274.56" y="296.4" fill="#4ade80">0</text>
+        <text x="285.12" y="296.4" fill="#4ade80">+</text>
+        <text x="295.68" y="296.4" fill="#4ade80">_</text>
+        <text x="306.24" y="296.4" fill="#4ade80">=</text>
+        <text x="316.8" y="296.4" fill="#4ade80">3</text>
+        <text x="327.36" y="296.4" fill="#4ade80">8</text>
+        <text x="337.92" y="296.4" fill="#4ade80">3</text>
+        <text x="348.48" y="296.4" fill="#4ade80">3</text>
+        <text x="359.04" y="296.4" fill="#4ade80">3</text>
+        <text x="369.6" y="296.4" fill="#4ade80">5</text>
+        <text x="380.16" y="296.4" fill="#4ade80">1</text>
+        <text x="390.72" y="296.4" fill="#4ade80">3</text>
+        <text x="401.28" y="296.4" fill="#4ade80">3</text>
+        <text x="411.84" y="296.4" fill="#4ade80">3</text>
+        <text x="422.4" y="296.4" fill="#4ade80">3</text>
+        <text x="432.96" y="296.4" fill="#4ade80">3</text>
+        <text x="443.52" y="296.4" fill="#4ade80">3</text>
+        <text x="454.08" y="296.4" fill="#4ade80">3</text>
+        <text x="464.64" y="296.4" fill="#4ade80">4</text>
+        <text x="475.2" y="296.4" fill="#4ade80">2</text>
+        <text x="485.76" y="296.4" fill="#4ade80">3</text>
+        <text x="496.32" y="296.4" fill="#4ade80">3</text>
+        <text x="506.88" y="296.4" fill="#4ade80">3</text>
+        <text x="517.44" y="296.4" fill="#4ade80">3</text>
+        <text x="528" y="296.4" fill="#4ade80">3</text>
+      </g>
+      <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.18s" begin="1.30s" fill="freeze"/>
+        <text x="0" y="318.8" fill="#4ade80">3</text>
+        <text x="10.56" y="318.8" fill="#4ade80">3</text>
+        <text x="21.12" y="318.8" fill="#4ade80">3</text>
+        <text x="31.68" y="318.8" fill="#4ade80">3</text>
+        <text x="42.24" y="318.8" fill="#4ade80">3</text>
+        <text x="52.8" y="318.8" fill="#4ade80">3</text>
+        <text x="63.36" y="318.8" fill="#4ade80">3</text>
+        <text x="73.92" y="318.8" fill="#4ade80">3</text>
+        <text x="84.48" y="318.8" fill="#4ade80">3</text>
+        <text x="95.04" y="318.8" fill="#4ade80">3</text>
+        <text x="105.6" y="318.8" fill="#4ade80">3</text>
+        <text x="116.16" y="318.8" fill="#4ade80">3</text>
+        <text x="126.72" y="318.8" fill="#4ade80">3</text>
+        <text x="137.28" y="318.8" fill="#4ade80">3</text>
+        <text x="147.84" y="318.8" fill="#4ade80">3</text>
+        <text x="158.4" y="318.8" fill="#4ade80">3</text>
+        <text x="168.96" y="318.8" fill="#4ade80">3</text>
+        <text x="179.52" y="318.8" fill="#4ade80">3</text>
+        <text x="190.08" y="318.8" fill="#4ade80">3</text>
+        <text x="200.64" y="318.8" fill="#4ade80">3</text>
+        <text x="211.2" y="318.8" fill="#4ade80">3</text>
+        <text x="221.76" y="318.8" fill="#4ade80">3</text>
+        <text x="232.32" y="318.8" fill="#4ade80">3</text>
+        <text x="242.88" y="318.8" fill="#4ade80">3</text>
+        <text x="253.44" y="318.8" fill="#4ade80">3</text>
+        <text x="264" y="318.8" fill="#4ade80">3</text>
+        <text x="274.56" y="318.8" fill="#4ade80">3</text>
+        <text x="285.12" y="318.8" fill="#4ade80">3</text>
+        <text x="295.68" y="318.8" fill="#4ade80">3</text>
+        <text x="306.24" y="318.8" fill="#4ade80">3</text>
+        <text x="316.8" y="318.8" fill="#4ade80">3</text>
+        <text x="327.36" y="318.8" fill="#4ade80">3</text>
+        <text x="337.92" y="318.8" fill="#4ade80">3</text>
+        <text x="348.48" y="318.8" fill="#4ade80">3</text>
+        <text x="359.04" y="318.8" fill="#4ade80">3</text>
+        <text x="369.6" y="318.8" fill="#4ade80">3</text>
+        <text x="380.16" y="318.8" fill="#4ade80">3</text>
+        <text x="390.72" y="318.8" fill="#4ade80">3</text>
+        <text x="401.28" y="318.8" fill="#4ade80">3</text>
+        <text x="411.84" y="318.8" fill="#4ade80">3</text>
+        <text x="422.4" y="318.8" fill="#4ade80">3</text>
+        <text x="432.96" y="318.8" fill="#4ade80">3</text>
+        <text x="443.52" y="318.8" fill="#4ade80">3</text>
+        <text x="454.08" y="318.8" fill="#4ade80">3</text>
+        <text x="464.64" y="318.8" fill="#4ade80">3</text>
+        <text x="475.2" y="318.8" fill="#4ade80">3</text>
+        <text x="485.76" y="318.8" fill="#4ade80">3</text>
+        <text x="496.32" y="318.8" fill="#4ade80">3</text>
+        <text x="506.88" y="318.8" fill="#4ade80">3</text>
+        <text x="517.44" y="318.8" fill="#4ade80">3</text>
+        <text x="528" y="318.8" fill="#4ade80">3</text>
+      </g>
+      <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.18s" begin="1.35s" fill="freeze"/>
+        <text x="0" y="341.2" fill="#4ade80">3</text>
+        <text x="10.56" y="341.2" fill="#4ade80">3</text>
+        <text x="21.12" y="341.2" fill="#4ade80">3</text>
+        <text x="31.68" y="341.2" fill="#4ade80">3</text>
+        <text x="42.24" y="341.2" fill="#4ade80">3</text>
+        <text x="52.8" y="341.2" fill="#4ade80">3</text>
+        <text x="63.36" y="341.2" fill="#4ade80">3</text>
+        <text x="73.92" y="341.2" fill="#4ade80">3</text>
+        <text x="84.48" y="341.2" fill="#4ade80">3</text>
+        <text x="95.04" y="341.2" fill="#4ade80">3</text>
+        <text x="105.6" y="341.2" fill="#4ade80">3</text>
+        <text x="116.16" y="341.2" fill="#4ade80">3</text>
+        <text x="126.72" y="341.2" fill="#4ade80">3</text>
+        <text x="137.28" y="341.2" fill="#4ade80">3</text>
+        <text x="147.84" y="341.2" fill="#4ade80">3</text>
+        <text x="158.4" y="341.2" fill="#4ade80">3</text>
+        <text x="168.96" y="341.2" fill="#4ade80">3</text>
+        <text x="179.52" y="341.2" fill="#4ade80">3</text>
+        <text x="190.08" y="341.2" fill="#4ade80">3</text>
+        <text x="200.64" y="341.2" fill="#4ade80">3</text>
+        <text x="211.2" y="341.2" fill="#4ade80">3</text>
+        <text x="221.76" y="341.2" fill="#4ade80">3</text>
+        <text x="232.32" y="341.2" fill="#4ade80">3</text>
+        <text x="242.88" y="341.2" fill="#4ade80">3</text>
+        <text x="253.44" y="341.2" fill="#4ade80">3</text>
+        <text x="264" y="341.2" fill="#4ade80">3</text>
+        <text x="274.56" y="341.2" fill="#4ade80">3</text>
+        <text x="285.12" y="341.2" fill="#4ade80">3</text>
+        <text x="295.68" y="341.2" fill="#4ade80">3</text>
+        <text x="306.24" y="341.2" fill="#4ade80">3</text>
+        <text x="316.8" y="341.2" fill="#4ade80">3</text>
+        <text x="327.36" y="341.2" fill="#4ade80">3</text>
+        <text x="337.92" y="341.2" fill="#4ade80">3</text>
+        <text x="348.48" y="341.2" fill="#4ade80">3</text>
+        <text x="359.04" y="341.2" fill="#4ade80">3</text>
+        <text x="369.6" y="341.2" fill="#4ade80">3</text>
+        <text x="380.16" y="341.2" fill="#4ade80">3</text>
+        <text x="390.72" y="341.2" fill="#4ade80">3</text>
+        <text x="401.28" y="341.2" fill="#4ade80">3</text>
+        <text x="411.84" y="341.2" fill="#4ade80">3</text>
+        <text x="422.4" y="341.2" fill="#4ade80">3</text>
+        <text x="432.96" y="341.2" fill="#4ade80">3</text>
+        <text x="443.52" y="341.2" fill="#4ade80">3</text>
+        <text x="454.08" y="341.2" fill="#4ade80">3</text>
+        <text x="464.64" y="341.2" fill="#4ade80">3</text>
+        <text x="475.2" y="341.2" fill="#4ade80">3</text>
+        <text x="485.76" y="341.2" fill="#4ade80">3</text>
+        <text x="496.32" y="341.2" fill="#4ade80">3</text>
+        <text x="506.88" y="341.2" fill="#4ade80">3</text>
+        <text x="517.44" y="341.2" fill="#4ade80">3</text>
+        <text x="528" y="341.2" fill="#4ade80">3</text>
+      </g>
+    </svg>
+  </g>
+
+  <!-- Sub-title: KELLY // v1.x -->
+  <g class="mono" opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="0.2s" begin="1.45s" fill="freeze"/>
+    <text x="40" y="280" font-size="11"><tspan class="dim">kelly // v1.x // built 198x // </tspan><tspan class="ok">copyleft ¯\_(ツ)_/¯</tspan></text>
+  </g>
+
+  <!-- [MOD] loading header -->
+  <g class="mono" opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="0.2s" begin="1.65s" fill="freeze"/>
+    <text x="28" y="308"><tspan class="pink">[KERN]</tspan><tspan class="lbl" dx="6">loading subsystems...</tspan></text>
+  </g>
+
+  <!-- Module load OK lines -->
+  <g class="mono" opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="0.15s" begin="1.85s" fill="freeze"/>
+    <text x="48" y="328"><tspan class="dim">[</tspan><tspan class="ok" dx="2" filter="url(#neonGreen)"> OK </tspan><tspan class="dim" dx="2">]</tspan><tspan class="lbl" dx="6">consulting.mod</tspan><tspan class="dim" dx="8">eu · us</tspan></text>
+  </g>
+  <g class="mono" opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="0.15s" begin="2.00s" fill="freeze"/>
+    <text x="48" y="346"><tspan class="dim">[</tspan><tspan class="ok" dx="2" filter="url(#neonGreen)"> OK </tspan><tspan class="dim" dx="2">]</tspan><tspan class="lbl" dx="6">cloudnua.mod</tspan><tspan class="dim" dx="8">devs · ai-agents</tspan></text>
+  </g>
+  <g class="mono" opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="0.15s" begin="2.15s" fill="freeze"/>
+    <text x="48" y="364"><tspan class="dim">[</tspan><tspan class="ok" dx="2" filter="url(#neonGreen)"> OK </tspan><tspan class="dim" dx="2">]</tspan><tspan class="lbl" dx="6">oss.mod</tspan><tspan class="dim" dx="8">github</tspan></text>
+  </g>
+  <g class="mono" opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="0.15s" begin="2.30s" fill="freeze"/>
+    <text x="48" y="382"><tspan class="dim">[</tspan><tspan class="ok" dx="2" filter="url(#neonGreen)"> OK </tspan><tspan class="dim" dx="2">]</tspan><tspan class="lbl" dx="6">writing.mod</tspan><tspan class="dim" dx="8">readers</tspan></text>
+  </g>
+  <g class="mono" opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="0.15s" begin="2.45s" fill="freeze"/>
+    <text x="48" y="400"><tspan class="dim">[</tspan><tspan class="ok" dx="2" filter="url(#neonGreen)"> OK </tspan><tspan class="dim" dx="2">]</tspan><tspan class="lbl" dx="6">learning.mod</tspan><tspan class="dim" dx="8">training · certs</tspan></text>
+  </g>
+
+  <!-- FAIL line: automate-self blocked -->
+  <g class="mono" opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="0.15s" begin="2.65s" fill="freeze"/>
+    <text x="48" y="418"><tspan class="dim">[</tspan><tspan class="pink" dx="2" filter="url(#neonPink)">FAIL</tspan><tspan class="dim" dx="2">]</tspan><tspan class="lbl" dx="6">automate-self.mod</tspan><tspan class="dim" dx="6">blocked: 1 pending commit since 198x</tspan></text>
+  </g>
+
+  <!-- Kernel ready -->
+  <g class="mono" opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="0.2s" begin="2.90s" fill="freeze"/>
+    <text x="28" y="446"><tspan class="pink">[KERN]</tspan><tspan class="ok" dx="6">ready.</tspan><tspan class="lbl" dx="10">welcome, enda.</tspan></text>
+  </g>
+
+  <!-- ==================== SHELL PROMPT + SYSTEMCTL ==================== -->
+
+  <!-- Blank line separator -->
+
+  <!-- Typewriter command line (shifted to begin after boot) -->
+  <g class="mono" filter="url(#neonCyan)" opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="0.1s" begin="3.20s" fill="freeze"/>
+    <text x="28" y="478" class="cmd">
+      <tspan>$ </tspan>
+      <tspan>
+        <animate attributeName="textLength" values="0;260" dur="2.0s" begin="3.30s" fill="freeze"/>
+        systemctl status enda.service
+      </tspan>
+    </text>
+    <rect x="46" y="466" width="8" height="16" fill="#00f0ff">
+      <animate attributeName="x" values="46;308" dur="2.0s" begin="3.30s" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite" begin="5.30s"/>
+    </rect>
+  </g>
+
+  <!-- systemctl output -->
+  <g class="mono" opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="0.4s" begin="5.50s" fill="freeze"/>
+    <text x="28" y="506"><tspan fill="#4ade80">●</tspan><tspan class="lbl" dx="4"> enda.service - Enda Kelly (running since 198x)</tspan></text>
+    <text x="40" y="526" class="dim">Loaded: loaded (/etc/cloudnua/enda.conf; enabled)</text>
+    <text x="40" y="546" class="dim">Active: <tspan class="ok">active</tspan> (<tspan>
+      <animate attributeName="fill" values="#ff2e93;#fbbf24;#4ade80;#00f0ff;#ff2e93" dur="6s" repeatCount="indefinite" begin="6.00s"/>
+      caffeinated
+    </tspan><tspan class="dim">) since Mon 08:08 GMT</tspan></text>
+    <text x="40" y="566" class="dim">Main PID: 1 (enda)</text>
+  </g>
+
+  <!-- ==================== FLOW DIAGRAM ==================== -->
+
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="0.6s" begin="6.20s" fill="freeze"/>
+
+    <!-- Divider -->
+    <line x1="28" y1="591" x2="872" y2="591" stroke="#ff2e93" stroke-width="0.8" opacity="0.35"/>
+
+    <!-- Central node -->
+    <rect x="70" y="651" width="140" height="44" rx="4" stroke="#ff2e93" stroke-width="2" fill="#1a0632" filter="url(#neonPink)"/>
+    <text x="140" y="679" text-anchor="middle" class="mono pink" font-size="14" filter="url(#neonPink)">enda (v1.x)</text>
+
+    <!-- Coffee input -->
+    <text x="28" y="643" class="mono" font-size="16">☕</text>
+    <line x1="48" y1="643" x2="140" y2="651" class="arrow"/>
+
+    <!-- Output arrows with labels -->
+    <g class="mono">
+      <line x1="210" y1="661" x2="360" y2="643" class="arrow"/>
+      <text x="370" y="647" class="pink">consulting</text>
+      <text x="470" y="647" class="dim">→</text>
+      <text x="490" y="647" class="lbl">eu · us</text>
+
+      <line x1="210" y1="669" x2="360" y2="669" class="arrow"/>
+      <text x="370" y="673" class="pink">cloudnua</text>
+      <text x="470" y="673" class="dim">→</text>
+      <text x="490" y="673" class="lbl">devs · ai-agents</text>
+
+      <line x1="210" y1="677" x2="360" y2="695" class="arrow"/>
+      <text x="370" y="699" class="pink">oss</text>
+      <text x="470" y="699" class="dim">→</text>
+      <text x="490" y="699" class="lbl">github</text>
+
+      <line x1="210" y1="685" x2="360" y2="721" class="arrow"/>
+      <text x="370" y="725" class="pink">writing</text>
+      <text x="470" y="725" class="dim">→</text>
+      <text x="490" y="725" class="lbl">readers</text>
+
+      <line x1="210" y1="691" x2="360" y2="747" class="arrow"/>
+      <text x="370" y="751" class="pink">learning</text>
+      <text x="470" y="751" class="dim">→</text>
+      <text x="490" y="751" class="lbl">training · certs</text>
+    </g>
+
+    <!-- Data pulses -->
+    <circle r="3" class="pulse" filter="url(#neonPink)">
+      <animateMotion dur="2s" repeatCount="indefinite" begin="6.60s" path="M 210 661 L 360 643"/>
+    </circle>
+    <circle r="3" class="pulse" filter="url(#neonPink)">
+      <animateMotion dur="2s" repeatCount="indefinite" begin="6.90s" path="M 210 669 L 360 669"/>
+    </circle>
+    <circle r="3" class="pulse" filter="url(#neonPink)">
+      <animateMotion dur="2s" repeatCount="indefinite" begin="7.20s" path="M 210 677 L 360 695"/>
+    </circle>
+    <circle r="3" class="pulse" filter="url(#neonPink)">
+      <animateMotion dur="2s" repeatCount="indefinite" begin="7.50s" path="M 210 685 L 360 721"/>
+    </circle>
+    <circle r="3" class="pulse" filter="url(#neonPink)">
+      <animateMotion dur="2s" repeatCount="indefinite" begin="7.80s" path="M 210 691 L 360 747"/>
+    </circle>
+
+    <!-- Feedback loop arrow -->
+    <path d="M 640 751 Q 800 751 800 669 Q 800 615 140 615 L 140 651" class="arrow" stroke-dasharray="4 4"/>
+    <text x="770" y="607" class="mono dim" font-size="11">feedback</text>
+    <circle r="2.5" fill="#00f0ff" filter="url(#neonCyan)">
+      <animateMotion dur="3.2s" repeatCount="indefinite" begin="8.10s" path="M 640 751 Q 800 751 800 669 Q 800 615 140 615 L 140 651"/>
+    </circle>
+  </g>
+</svg>
