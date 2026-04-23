@@ -4,7 +4,7 @@
   <img alt="Enda Kelly — still trying to automate myself out of a job. The irony scales linearly." src="./public/images/banner-dark.svg">
 </picture>
 
-Cloud architect, AI governance nerd, and recovering FinOps optimist. I help companies govern AI, cut cloud bills, and modernise infra — for more details teleport straight to **[portfolio.cloudnua.com](https://portfolio.cloudnua.com)**. This page is the fun alter ego side, to which your are very much welcome.
+Cloud architect, AI governance nerd, and recovering FinOps optimist. I help companies govern AI, cut cloud bills, and modernise infra — for more details teleport straight to **[portfolio.cloudnua.com](https://portfolio.cloudnua.com)**. This page is the fun alter ego side, to which you are very much welcome.
 
 In other breaking news:
 
